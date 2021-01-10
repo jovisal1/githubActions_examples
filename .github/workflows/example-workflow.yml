@@ -2,7 +2,7 @@ name: Checking-with-Linter
 on:
   push:
     branches:
-      - multiple_node_versions
+      - environment_variables_usage
 jobs:
   environment-varibles-example:
     steps:
