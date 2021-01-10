@@ -2,13 +2,12 @@
   "extends": "standard",
   "rules": {
     "semi": [2, "always"],
-    "quotes": ["error", "double"],
-    "space-before-function-paren": [0, "never"]
+    "quotes": ["error", "double"]
   },
+
   "overrides": [
     {
-      "files": ["**/*.test.js"],
-      "extends": ["plugin:jest/recommended", "plugin:jest/style"]
+      "excludedFiles": ["sum.js", "*.test.js"]
     }
   ]
 }
