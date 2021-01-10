@@ -2,7 +2,7 @@ name: Checking-with-Linter
 on:
   push:
     branches:
-      - nodejs_example
+      - adding_jest_job
 jobs:
   jest-execution:
     name: jest-execution
