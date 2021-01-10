@@ -3,11 +3,5 @@
   "rules": {
     "semi": [2, "always"],
     "quotes": ["error", "double"]
-  },
-
-  "overrides": [
-    {
-      "excludedFiles": ["sum.js", "*.test.js"]
-    }
-  ]
+  }
 }
