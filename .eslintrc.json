@@ -4,7 +4,10 @@
     "semi": [2, "always"],
     "quotes": ["error", "double"]
   },
-  "env": {
-    "jest/globals": true
-  }
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "extends": ["plugin:jest/recommended", "plugin:jest/style"]
+    }
+  ]
 }
