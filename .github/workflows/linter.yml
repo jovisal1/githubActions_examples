@@ -4,9 +4,19 @@ on:
     branches:
       - nodejs_example
 jobs:
+  jest-execution:
+    name: jest-execution
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run jest tests
+        run: npm test
+
   linter-execution:
     name: linter-execution
     runs-on: ubuntu-latest
+    needs: jest-execution
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
