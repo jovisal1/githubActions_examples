@@ -36,5 +36,6 @@ jobs:
         with:
           domain: "draconian-cap.surge.sh"
           project: "."
-          login: vidalsalvadorp@gmail.com
-          token: 6eac9027e9a512dfa7064f2cc41b780e
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
+      
