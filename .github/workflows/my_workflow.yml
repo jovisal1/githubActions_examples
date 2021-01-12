@@ -1,0 +1,37 @@
+name: My workflow
+
+on:
+  push:
+    branches:
+      - react_app_deploy
+
+jobs:
+  build:
+    name: Build project job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Building app
+        run: npm run build
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: static-generated-files
+          path: dist
+
+  deploy:
+    name: Deploy project job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: static-generated-files
+      - name: Deploy to foo-bar.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: "draconian-cap.surge.sh"
+          project: "dist/build"
+          login: vidalsalvadorp@gmail.com
+          token: 6eac9027e9a512dfa7064f2cc41b780e
