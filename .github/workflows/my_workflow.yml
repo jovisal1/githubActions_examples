@@ -20,7 +20,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: static-generated-files
-          path: dist
+          path: build
 
   deploy:
     name: Deploy project job
