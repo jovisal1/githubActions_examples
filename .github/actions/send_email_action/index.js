@@ -1,5 +1,6 @@
 require("dotenv").config();
 const nodemailer = require("nodemailer");
+const core = require("@actions/core");
 const email_to_send = core.getInput("email_to_send");
 
 var transporter = nodemailer.createTransport({
