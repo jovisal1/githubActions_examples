@@ -13,6 +13,9 @@ jobs:
       - name: Send email action step
         id: email
         uses: ./.github/actions/send_email_action/
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER}}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS}}
         with:
           email_to_send: "pvidalsalvador@gmail.com"
       - name: Get the response
