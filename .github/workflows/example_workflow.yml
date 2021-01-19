@@ -1,0 +1,17 @@
+name: Sending-email
+on:
+  push:
+    branches:
+      - send_email_action
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to send email
+    steps:
+      - name: Send email action step
+        id: email
+        uses: ./actions/email_to_send/
+        with:
+          email_to_send: "pvidalsalvador@gmail.com"
+      - name: Get the response
+        run: echo "The response was ${{ steps.email.outputs.response }}"
