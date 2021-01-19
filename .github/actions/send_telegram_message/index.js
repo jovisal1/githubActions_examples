@@ -11,6 +11,6 @@ const bot = new TelegramBot(token, { polling: true });
 // A partir de estas tres líneas de código, ya podríamos empezar a crear comandos y eventos para darle funcionalidad a nuestro bot.
 bot.sendMessage(
   process.env.CHAT_ID,
-  persona_a_avisar + ", se ha ejecutado correctamente el workflow "
+  persona_a_avisar + ", se ha ejecutado correctamente el workflow ahora sí"
 );
 core.setOutput("response", "Mensaje enviado");
