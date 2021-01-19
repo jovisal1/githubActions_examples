@@ -1,0 +1,19 @@
+name: Sending-telegram
+on:
+  push:
+    branches:
+      - send_email_action
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to send email
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Send telegram message action step
+        id: telegram
+        uses: ./.github/actions/send_telegram_message/
+        with:
+          persona_a_avisar: "Ramon"
+      - name: Get the response
+        run: echo "The response was ${{ steps.telegram.outputs.response }}"

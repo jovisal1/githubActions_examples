@@ -1,0 +1,12 @@
+name: "Send telegram message"
+description: "Action to send a telegram message"
+inputs:
+  persona_a_avisar: # id of input
+    description: "Persona a avisar"
+    required: true
+outputs:
+  response: # id of output
+    description: "Response of our action"
+runs:
+  using: "node12"
+  main: "dist/index.js"
