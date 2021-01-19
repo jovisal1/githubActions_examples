@@ -1,0 +1,25 @@
+{
+  "name": "email_send_example",
+  "version": "1.0.0",
+  "description": "Repository with some custom github Actions examples for learning purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jovisal1/githubActions_examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jovisal1/githubActions_examples/issues"
+  },
+  "homepage": "https://github.com/jovisal1/githubActions_examples#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "nodemailer": "^6.4.17"
+  }
+}

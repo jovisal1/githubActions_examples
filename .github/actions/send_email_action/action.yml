@@ -1,0 +1,12 @@
+name: "Send email"
+description: "Action to send an email"
+inputs:
+  email_to_send: # id of input
+    description: "Email address"
+    required: true
+outputs:
+  response: # id of output
+    description: "Response of our action"
+runs:
+  using: "node12"
+  main: "/dist/index.js"
