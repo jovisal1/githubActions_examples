@@ -13,6 +13,9 @@ jobs:
       - name: Send telegram message action step
         id: telegram
         uses: ./.github/actions/send_telegram_message/
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN}}
+          CHAT_ID: ${{ secrets.CHAT_ID}}
         with:
           persona_a_avisar: "Ramon"
       - name: Get the response
