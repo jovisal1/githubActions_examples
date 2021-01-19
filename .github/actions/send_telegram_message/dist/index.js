@@ -206,7 +206,7 @@ const TelegramBot = __nccwpck_require__(8413);
 // Creando nuestra variable que almacenara nuestro token para autenticarnos con el bot creado con BotFather
 const token = process.env.TELEGRAM_TOKEN;
 // A continuacion, creamos nuestro bot y configuramos el parametro polling igualandolo a True, Con esto logramos que el bot esté en constante proceso de escucha y procesamiento de datos respecto al token de la API de Telegram.
-const bot = new TelegramBot(token, { polling: true });
+const bot = new TelegramBot(token, { polling: false });
 // A partir de estas tres líneas de código, ya podríamos empezar a crear comandos y eventos para darle funcionalidad a nuestro bot.
 bot.sendMessage(
   process.env.CHAT_ID,
