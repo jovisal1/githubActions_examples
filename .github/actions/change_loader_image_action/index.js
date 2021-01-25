@@ -1,6 +1,6 @@
 const core = require("@actions/core");
 const fs = require("fs");
-var filePath = "../../../src/App.js";
+var filePath = "./src/App.js";
 
 const gifs_alternative = core.getInput("gifs_alternative");
 const randomPosition = Math.floor(Math.random() * gifs_alternative.length) + 0;
