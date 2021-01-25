@@ -12,6 +12,22 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Change App.js
+        uses: ./.github/actions/change_loader_image_action/
+        with:
+          gifs_alternative:
+            [
+              "https://pixelpapa.com/wp-content/uploads/2018/11/2.gif",
+              "https://pixelpapa.com/wp-content/uploads/2018/11/3.gif",
+              "https://pixelpapa.com/wp-content/uploads/2018/11/9.gif",
+              "https://miro.medium.com/max/489/0*cWpsf9D3g346Va20.gif",
+            ]
+      - run: |
+          git config user.name jovisal1
+          git config user.email pvidalsalvador@gmail.com
+          git add .
+          git commit -m "App.js modification with random gif"
+          git push
       - name: Building app
         run: |
           npm install
@@ -38,4 +54,3 @@ jobs:
           project: "."
           login: ${{ secrets.surge_login }}
           token: ${{ secrets.surge_token }}
-      

@@ -1,0 +1,12 @@
+name: "Change loader image action"
+description: "Action to change the loader of React project"
+inputs:
+  gifs_alternative: # id of input
+    description: "Gif alternatives"
+    required: true
+outputs:
+  response: # id of output
+    description: "Response of our action"
+runs:
+  using: "node12"
+  main: "dist/index.js"
