@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src=":" className="App-logo" alt="logo" />
+        <img src="p" className="App-logo" alt="logo" />
         <p>Funcionando el despliegue a full</p>
         <a
           className="App-link"
