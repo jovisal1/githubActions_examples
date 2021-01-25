@@ -2,9 +2,9 @@ const core = require("@actions/core");
 const fs = require("fs");
 var filePath = "./src/App.js";
 
-const gifs_alternative = core.getInput("gifs_alternative");
-console.log(gifs_alternative);
-const randomPosition = Math.floor(Math.random() * gifs_alternative.length) + 0;
+const randomPosition = Math.floor(Math.random() * 4) + 1;
+const gifs_alternative = core.getInput("gifs_alternative_" + randomPosition);
+
 try {
   fs.readFile(filePath, "utf8", function (err, data) {
     var gifUrl = gifs_alternative[randomPosition];
