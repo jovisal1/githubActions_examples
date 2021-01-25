@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="https://pixelpapa.com/wp-content/uploads/2018/11/3.gif" className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
         <p>Funcionando el despliegue a full</p>
         <a
           className="App-link"

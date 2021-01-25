@@ -19,7 +19,10 @@ try {
       /src=.* className/,
       'src="' + gifUrl + '" className'
     );
-
+    result = result.replace(
+      'import logo from "./logo.svg";',
+      '#import logo from "./logo.svg";'
+    );
     fs.writeFile(filePath, result, "utf8", function (err) {
       if (err) return console.log(err);
     });
