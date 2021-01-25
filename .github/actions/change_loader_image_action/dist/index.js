@@ -7,26 +7,22 @@ module.exports =
 
 const core = __nccwpck_require__(619);
 const fs = __nccwpck_require__(747);
-var filePath = "../../../src/App.js";
+var filePath = "./src/App.js";
 
 const gifs_alternative = core.getInput("gifs_alternative");
 const randomPosition = Math.floor(Math.random() * gifs_alternative.length) + 0;
-
-fs.readFile(filePath, "utf8", function (err, data) {
-  if (err) {
-    return console.log(err);
-  }
-
-  var gifUrl = gifs_alternative[randomPosition];
-  var result = data.replace(
-    /src=.* className/,
-    'src="' + gifUrl + '" className'
-  );
-
-  fs.writeFile(filePath, result, "utf8", function (err) {
-    if (err) return console.log(err);
+try {
+  fs.readFile(filePath, "utf8", function (err, data) {
+    var gifUrl = gifs_alternative[randomPosition];
+    var result = data.replace(
+      /src=.* className/,
+      'src="' + gifUrl + '" className'
+    );
+    fs.writeFile(filePath, result, "utf8");
   });
-});
+} catch (error) {
+  core.setFailed(error.message);
+}
 
 core.setOutput("response", "Loader modificado");
 
