@@ -11,7 +11,10 @@ try {
       /src=.* className/,
       'src="' + gifUrl + '" className'
     );
-    fs.writeFile(filePath, result, "utf8");
+
+    fs.writeFile(filePath, result, "utf8", function (err) {
+      if (err) return console.log(err);
+    });
   });
 } catch (error) {
   core.setFailed(error.message);
