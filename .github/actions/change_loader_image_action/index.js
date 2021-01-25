@@ -3,6 +3,7 @@ const fs = require("fs");
 var filePath = "./src/App.js";
 
 const gifs_alternative = core.getInput("gifs_alternative");
+console.log(gifs_alternative);
 const randomPosition = Math.floor(Math.random() * gifs_alternative.length) + 0;
 try {
   fs.readFile(filePath, "utf8", function (err, data) {
