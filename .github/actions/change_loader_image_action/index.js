@@ -7,7 +7,7 @@ const gifs_alternative = core.getInput("gifs_alternative_" + randomPosition);
 
 try {
   fs.readFile(filePath, "utf8", function (err, data) {
-    var gifUrl = gifs_alternative[randomPosition];
+    var gifUrl = gifs_alternative;
     var result = data.replace(
       /src=.* className/,
       'src="' + gifUrl + '" className'
