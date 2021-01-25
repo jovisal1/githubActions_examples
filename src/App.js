@@ -1,11 +1,15 @@
-#import logo from "./logo.svg";
+import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="https://pixelpapa.com/wp-content/uploads/2018/11/8.gif" className="App-logo" alt="logo" />
+        <img
+          src="https://pixelpapa.com/wp-content/uploads/2018/11/8.gif"
+          className="App-logo"
+          alt="logo"
+        />
         <p>Funcionando el despliegue a full</p>
         <a
           className="App-link"
