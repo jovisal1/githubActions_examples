@@ -2,7 +2,6 @@ require("dotenv").config();
 const core = require("@actions/core");
 const github = require("@actions/github");
 const persona_a_avisar = core.getInput("persona_a_avisar");
-
 const context = github.context;
 
 //Importando la libreria node-telegram-bot-api
